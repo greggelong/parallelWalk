@@ -21,15 +21,15 @@ function setup() {
       //facingMode: "user"
     //} 
   };
-  if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+  //if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
     // true for mobile device
     capture = createCapture(VIDEO,constraints);
-  }else{
+  //}else{
     // false for not mobile device
-    capture = createCapture(VIDEO)
-  }
+   // capture = createCapture(VIDEO)
+  //}
   //
-  capture = createCapture(VIDEO)
+  //capture = createCapture(VIDEO)
   capture.size(width/5,height/5)
   capture.hide();
   cre.resize(z,0)
