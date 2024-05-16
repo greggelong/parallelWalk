@@ -2,8 +2,9 @@ let capture;
 let t =0;
 let T=1000;
 let TT =500
-let x,y,z
+let x,y
 let cre
+let z =400
 function preload(){
     cre = loadImage("ngl.png")
 }
@@ -20,11 +21,18 @@ function setup() {
       //facingMode: "user"
     //} 
   };
-  capture = createCapture(VIDEO,constraints);
-  //capture = createCapture(VIDEO)
+  if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+    // true for mobile device
+    capture = createCapture(VIDEO,constraints);
+  }else{
+    // false for not mobile device
+    capture = createCapture(VIDEO)
+  }
+  //
+  capture = createCapture(VIDEO)
   capture.size(width/5,height/5)
   capture.hide();
-  cre.resize(400,0)
+  cre.resize(z,0)
 }
 
 
@@ -39,7 +47,7 @@ function draw() {
   y = noise(T);
   y = map(y,0,1,0,height);
   z = noise(TT)
-  z = map(a,0,1,100,400)
+  z = map(z,0,1,300,500)
   t =t+0.01;
   T =T+0.01;
   TT=TT+0.01;
