@@ -4,7 +4,7 @@ function preload(){
     cre = loadImage("ngl.jpg")
 }
 function setup() {
-  createCanvas(windowWidth, windowheight);
+  createCanvas(windowWidth, windowHeight);
   var constraints = {
     audio: false,
     video: {
