@@ -1,7 +1,7 @@
 var capture;
 let cre
 function preload(){
-    cre = loadImage("cl.jpg")
+    cre = loadImage("cl.png")
 }
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -16,14 +16,15 @@ function setup() {
       //facingMode: "user"
     //} 
   };
-  capture = createCapture(constraints);
-  
+  capture = createCapture(VIDEO,constraints);
+  //capture = createCapture(VIDEO)
+  capture.size(width/10,height/10)
   capture.hide();
   cre.resize(200,0)
 }
 
 
 function draw() {
- image(capture, 0, 0); 
+ image(capture, 0, 0,width,height); 
  image(cre,width/2,height/2)
 }
