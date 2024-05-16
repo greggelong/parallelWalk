@@ -1,7 +1,7 @@
 var capture;
 let cre
 function preload(){
-    cre = loadImage("cl.png")
+    cre = loadImage("ngl.png")
 }
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -20,11 +20,12 @@ function setup() {
   //capture = createCapture(VIDEO)
   capture.size(width/10,height/10)
   capture.hide();
-  cre.resize(200,0)
+  cre.resize(400,0)
 }
 
 
 function draw() {
  image(capture, 0, 0,width,height); 
+
  image(cre,width/2,height/2)
 }
