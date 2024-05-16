@@ -23,7 +23,7 @@ function setup() {
   };
   //if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
     // true for mobile device
-    capture = createCapture(VIDEO,constraints);
+  capture = createCapture(VIDEO,constraints);
   //}else{
     // false for not mobile device
    // capture = createCapture(VIDEO)
