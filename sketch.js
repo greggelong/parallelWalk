@@ -10,6 +10,7 @@ function preload(){
 }
 function setup() {
   createCanvas(windowWidth, windowHeight);
+  pixelDensity(1); 
   var constraints = {
     audio: false,
     video: {
