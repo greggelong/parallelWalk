@@ -1,7 +1,7 @@
 var capture;
 let cre
 function preload(){
-    cre = loadImage("ngl.jpg")
+    cre = loadImage("cl.jpg")
 }
 function setup() {
   createCanvas(windowWidth, windowHeight);
