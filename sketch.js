@@ -44,7 +44,7 @@ function draw() {
   
   // x=100;y=200;
   x = noise(t);
-  x = map(x,0,1,0,width);
+  x = map(x,0,1,0,width-300);// so the creature doenet keep going off screen
   y = noise(T);
   y = map(y,0,1,0,height);
   z = noise(TT)
